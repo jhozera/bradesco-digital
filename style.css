@@ -49,6 +49,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 nav img {
@@ -100,7 +101,7 @@ nav img {
   justify-content: center;
   align-items: center;
   height: auto;
-  padding: 40px;
+  padding: 100px;
   gap: 100px;
   background-image: url(./imagem/Background_CardProdutos.png);
 }
@@ -149,7 +150,7 @@ nav img {
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  padding: 10px;
+  padding: 50px;
   scroll-behavior: smooth;
   background-color: #fff;
 }
@@ -219,6 +220,7 @@ nav img {
   display: flex;
   justify-content: center;
   gap: 50px;
+  align-items: center;
 }
 
 .cartao-pr h2 {
@@ -280,7 +282,7 @@ nav img {
   background: #fff;
   gap: 100px;
   height: auto;
-  padding: 50px;
+  padding: 80px;
 
 }
 
@@ -377,6 +379,143 @@ footer {
 .footer-bottom a:hover {
   color: #ffdada;
 }
+
+
+/* quem somos */
+
+
+.banneree {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 60vh;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.banneree img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.banneree::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: 0;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    padding: 100px;
+    z-index: 1; 
+}
+
+.text h1 {
+    font-size: 30px;
+}
+
+.text a {
+    display: flex;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #ffa300;
+    text-decoration: none;
+    width: 180px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.text a:hover {
+    background-color: #0e9bdd;
+}
+
+
+.text-banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 50px;
+  gap: 50px;
+}
+
+.texttt h1{
+  font-size: 25px;
+  color: #6e6e6e;
+}
+
+.texttt p{
+  font-size: 20px;
+  color: #414040;
+}
+
+
+.deal-ailos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 50px;
+    /* box-shadow: -1px 3px 13px -6px; */
+}
+
+.deal-ic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    gap: 35px;
+    height: auto;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.deal-box {
+    color: #a10d23;
+    border-radius: 25px;
+    font-family: 'Montserrat', Arial, sans-serif;
+
+}
+
+.deal-box:hover{
+    color: #c01056;
+    transition: 0.3s;
+}
+
+
+
+@media (min-width: 769px) {
+  .banner-mobile{
+    display: none;
+  }
+
+  .banner-h{
+    display: none;
+  }
+
+}
+
+
 
 @media (max-width: 768px) {
   .button-cus {
