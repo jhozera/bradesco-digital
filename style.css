@@ -40,10 +40,15 @@ body {
 nav {
   background-color: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 15px 30px;
   border-bottom: 3px solid #cc0a2f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 nav img {
@@ -56,20 +61,22 @@ nav img {
   font-weight: 600;
   font-size: 14px;
   padding: 8px 16px;
-  background-color: #cc0628;
-  color: white;
+  /* background-color: #cc0628; */
+  color: rgb(82, 79, 79);
   border-radius: 5px;
   transition: background 0.3s;
 }
 
 .button a:hover {
-  background-color: #700505;
+  color: #c01056;
+  transition: 0.3s;
 }
 
 .banner {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-top: 70px;
 }
 
 .banner img {
@@ -78,7 +85,17 @@ nav img {
   object-fit: cover;
 }
 
-.atendimento{
+.banner-mobile{
+  padding-top: 110px;
+}
+
+.banner-mobile img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+}
+
+.atendimento {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,8 +105,8 @@ nav img {
   background-image: url(./imagem/Background_CardProdutos.png);
 }
 
-.atendimento-item a{
-  height: 320px;
+.atendimento-item a {
+  height: 250px;
   width: 180px;
   background-color: #f5f7fa;
   display: flex;
@@ -104,124 +121,123 @@ nav img {
   gap: 30px;
 }
 
-.atendimento a:hover{
+.atendimento a:hover {
   background: linear-gradient(45deg, #cc092f, #c01056);
-  transform: scale(1.1); 
+  transform: scale(1.1);
   transition: 0.3s;
   color: #fff;
 }
 
-.cartao:hover{
+.cartao:hover {
   background: linear-gradient(45deg, #cc092f, #c01056);
-  transform: scale(1.1); 
+  transform: scale(1.1);
   transition: 0.3s;
   color: white;
+}
 
+.cartao img:hover {
+  transform: scale(1.4);
+  transition: 0.3s;
 }
 
 
-
-
-.atendimento-item img{
-  width: 120px;
+.atendimento-item img {
+  width: 60px;
 }
 
+.comparador {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-behavior: smooth;
+  background-color: #fff;
+}
 
-  .comparador {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    padding: 10px;
-    scroll-behavior: smooth;
-    background-color: #fff;
-  }
+.cartao {
+  flex: 0 0 200px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #6e6e6e;
+}
 
+.cartao img {
+  max-width: 80px;
+  margin-bottom: 12px;
+  align-self: center;
+}
+
+.cartao h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.comparador::-webkit-scrollbar {
+  height: 8px;
+}
+.comparador::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+@media (max-width: 700px) {
   .cartao {
-    flex: 0 0 200px; 
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 6px rgba(0,0,0,0.1);
-    padding: 16px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: #6e6e6e;
+    flex: 0 0 140px;
+    padding: 12px;
   }
-
   .cartao img {
-    max-width: 80px;
-    margin-bottom: 12px;
-    align-self: center;
+    max-width: 60px;
+    margin-bottom: 8px;
   }
-
   .cartao h4 {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
+    font-size: 1rem;
+    margin-bottom: 10px;
   }
-
-  .comparador::-webkit-scrollbar {
-    height: 8px;
+  .botao-link {
+    padding: 8px 14px;
+    font-size: 0.9rem;
   }
-  .comparador::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 4px;
-  }
+}
 
-  @media (max-width: 700px) {
-    .cartao {
-      flex: 0 0 140px;
-      padding: 12px;
-    }
-    .cartao img {
-      max-width: 60px;
-      margin-bottom: 8px;
-    }
-    .cartao h4 {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-    .botao-link {
-      padding: 8px 14px;
-      font-size: 0.9rem;
-    }
-  }
-
-
-.cartao-be{
+.cartao-be {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: auto;
   background: linear-gradient(45deg, #cc092f, #c01056);
-  padding: 50PX;
+  padding: 50px;
   gap: 100px;
 }
 
-.cartao-pr{
+.cartao-pr {
   display: flex;
   justify-content: center;
   gap: 50px;
 }
 
-.cartao-pr h2{
+.cartao-pr h2 {
   font-size: 35px;
   color: #fff;
 }
 
-.cartao-pr P{
+.cartao-pr P {
   font-size: 20px;
   color: #fff;
 }
 
-
-.text{
+.text {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.bene{
+.bene {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,7 +245,7 @@ nav img {
   gap: 20px;
 }
 
-.bene-caixa{
+.bene-caixa {
   height: 200px;
   width: 200px;
   background-color: #f5f7fa;
@@ -246,18 +262,60 @@ nav img {
   padding: 10px;
 }
 
-.bene img{
+.bene img {
   width: 50px;
 }
 
-.bene-caixa:hover{
+.bene-caixa:hover {
   background: linear-gradient(45deg, #a10d23, #cc0a2f);
-  transform: scale(1.1); 
+  transform: scale(1.1);
   transition: 0.3s;
   color: #fff;
 }
 
+.banner-pl{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  gap: 100px;
+  height: auto;
+  padding: 50px;
 
+}
+
+.banner-br img{
+  width: 150px;
+  border-radius: 20px;
+}
+
+.banner-text h3{
+  font-size: 25px;
+  color: #6e6e6e;
+}
+
+.banner-text p{
+  font-size: 20px;
+  color: #6e6e6e;
+}
+
+.banner-text{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.banner-m img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner-h img{
+  width: 100%;
+  object-fit: cover;
+}
 
 footer {
   background: linear-gradient(45deg, #a10d23, #cc0a2f);
@@ -340,5 +398,29 @@ footer {
   .footer-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .atendimento{
+    flex-direction: column;
+  }
+
+  .cartao-pr{
+    flex-direction: column;
+  }
+
+  .bene{
+    flex-direction: column;
+  }
+
+  .banner{
+    display: none;
+  }
+
+  .banner-m{
+    display: none;
+  }
+
+  .banner-pl{
+    flex-direction: column;
   }
 }
